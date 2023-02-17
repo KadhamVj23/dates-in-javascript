@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Dates</title>
+    <style>
+        .cont{
+            font-size: 23px;
+            background-color: blanchedalmond;
+            border: 2px solid grey;
+            padding: 34px;
+            margin: 4px;
+            text-align: center;
+        }
+        #time{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <!-- This explains about "Time & Date" in javaScript. -->
+        <!-- <h3>Date Object</h3> -->
+        Current time is <span id="time"></span>
+
+    </div>
+    <script>
+        console.log("this is date & time");
+        // let dt = new Date(year, month, date, hours, minutes, seconds);
+        // console.log(dt);
+        let newDate = new Date();
+        console.log(newDate);
+        let yr = newDate.getFullYear();
+        console.log("The year is ", yr);
+        let dT = newDate.getDate();
+        console.log("The date is ", dT);
+        let mon = newDate.getMonth();
+        console.log("The month is ", mon);
+        let hr = newDate.getHours();
+        console.log("The time is ", hr);
+        let day = newDate.getDay();
+        console.log("the day is ",day);
+        // to change the date 
+        newDate.setDate(31);
+        newDate.setMinutes(29);
+        console.log(newDate);
+        setInterval(updateTime, 1000);
+        function updateTime(){
+            time.innerHTML = new Date();
+        }
+    </script>
+</body>
+</html>
